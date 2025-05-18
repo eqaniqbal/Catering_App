@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "utensil_items",
+  "info": {
+    "singularName": "utensil-item",
+    "pluralName": "utensil-items",
+    "displayName": "UtensilItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "UtensilItemID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "string"
+    },
+    "PricePerGuest": {
+      "type": "float"
+    },
+    "booking_utensil_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-utensil-item.booking-utensil-item",
+      "mappedBy": "utensil_item"
+    }
+  }
+}

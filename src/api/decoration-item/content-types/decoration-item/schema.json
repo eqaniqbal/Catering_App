@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "decoration_items",
+  "info": {
+    "singularName": "decoration-item",
+    "pluralName": "decoration-items",
+    "displayName": "DecorationItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "DecorationItemID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "string"
+    },
+    "PricePerItem": {
+      "type": "float"
+    },
+    "booking_decoration_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-decoration-item.booking-decoration-item",
+      "mappedBy": "decoration_item"
+    }
+  }
+}

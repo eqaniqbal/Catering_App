@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "BookingID": {
+      "type": "uid"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "bookings"
+    },
+    "event_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-type.event-type",
+      "inversedBy": "bookings"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "bookings"
+    },
+    "GuestCount": {
+      "type": "integer"
+    },
+    "BookingDate": {
+      "type": "datetime"
+    },
+    "payments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment.payment",
+      "mappedBy": "booking"
+    },
+    "booking_decoration_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-decoration-item.booking-decoration-item",
+      "mappedBy": "booking"
+    },
+    "booking_utensil_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-utensil-item.booking-utensil-item",
+      "mappedBy": "booking"
+    },
+    "booking_furniture_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-furniture-item.booking-furniture-item",
+      "mappedBy": "booking"
+    }
+  }
+}

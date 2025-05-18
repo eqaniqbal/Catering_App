@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "booking": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::booking.booking",
+      "inversedBy": "payments"
+    },
+    "PaymentStatus": {
+      "type": "string"
+    },
+    "PAymentID": {
+      "type": "uid"
+    },
+    "Amount": {
+      "type": "float"
+    },
+    "PaymentDate": {
+      "type": "date"
+    }
+  }
+}

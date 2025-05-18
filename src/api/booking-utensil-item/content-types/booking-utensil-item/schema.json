@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_utensil_items",
+  "info": {
+    "singularName": "booking-utensil-item",
+    "pluralName": "booking-utensil-items",
+    "displayName": "BookingUtensilItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "BookingUtensilItemID": {
+      "type": "uid"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::booking.booking",
+      "inversedBy": "booking_utensil_items"
+    },
+    "utensil_item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::utensil-item.utensil-item",
+      "inversedBy": "booking_utensil_items"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "UnitPrice": {
+      "type": "float"
+    },
+    "TotalPrice": {
+      "type": "float"
+    }
+  }
+}

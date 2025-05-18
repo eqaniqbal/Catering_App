@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admins",
+  "info": {
+    "singularName": "admin",
+    "pluralName": "admins",
+    "displayName": "Admin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "AdminID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "PhoneNumber": {
+      "type": "integer"
+    },
+    "CredentialID": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::credential.credential",
+      "inversedBy": "AdminID"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_roles",
+  "info": {
+    "singularName": "user-role",
+    "pluralName": "user-roles",
+    "displayName": "UserRole",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "RoleName": {
+      "type": "string"
+    },
+    "RoleID": {
+      "type": "uid"
+    },
+    "CredentialID": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential",
+      "mappedBy": "RoleID"
+    }
+  }
+}

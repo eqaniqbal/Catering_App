@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "furniture_items",
+  "info": {
+    "singularName": "furniture-item",
+    "pluralName": "furniture-items",
+    "displayName": "FurnitureItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "FurnitureID": {
+      "type": "uid"
+    },
+    "PricePerUnit": {
+      "type": "float"
+    },
+    "Style": {
+      "type": "string"
+    },
+    "booking_furniture_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking-furniture-item.booking-furniture-item",
+      "mappedBy": "furniture_item"
+    }
+  }
+}

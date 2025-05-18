@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_types",
+  "info": {
+    "singularName": "event-type",
+    "pluralName": "event-types",
+    "displayName": "EventType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "EventID": {
+      "type": "uid"
+    },
+    "EventName": {
+      "type": "string"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "event_type"
+    }
+  }
+}

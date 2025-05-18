@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "booking_decoration_items",
+  "info": {
+    "singularName": "booking-decoration-item",
+    "pluralName": "booking-decoration-items",
+    "displayName": "BookingDecorationItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "BookingDecorationItemID": {
+      "type": "uid"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::booking.booking",
+      "inversedBy": "booking_decoration_items"
+    },
+    "decoration_item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::decoration-item.decoration-item",
+      "inversedBy": "booking_decoration_items"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "UnitPrice": {
+      "type": "float"
+    },
+    "TotalPrice": {
+      "type": "float"
+    }
+  }
+}
