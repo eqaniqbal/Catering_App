@@ -14,9 +14,6 @@
     "RoleName": {
       "type": "string"
     },
-    "RoleID": {
-      "type": "uid"
-    },
     "CredentialID": {
       "type": "relation",
       "relation": "oneToMany",

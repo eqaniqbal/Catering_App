@@ -11,9 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "BookingID": {
-      "type": "uid"
-    },
     "customer": {
       "type": "relation",
       "relation": "manyToOne",

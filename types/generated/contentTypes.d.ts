@@ -385,7 +385,6 @@ export interface ApiAdminAdmin extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    AdminID: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -409,6 +408,7 @@ export interface ApiBookingDecorationItemBookingDecorationItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'booking_decoration_items';
   info: {
+    description: '';
     displayName: 'BookingDecorationItem';
     pluralName: 'booking-decoration-items';
     singularName: 'booking-decoration-item';
@@ -418,7 +418,6 @@ export interface ApiBookingDecorationItemBookingDecorationItem
   };
   attributes: {
     booking: Schema.Attribute.Relation<'manyToOne', 'api::booking.booking'>;
-    BookingDecorationItemID: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -446,6 +445,7 @@ export interface ApiBookingFurnitureItemBookingFurnitureItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'booking_furniture_items';
   info: {
+    description: '';
     displayName: 'BookingFurnitureItem';
     pluralName: 'booking-furniture-items';
     singularName: 'booking-furniture-item';
@@ -455,7 +455,6 @@ export interface ApiBookingFurnitureItemBookingFurnitureItem
   };
   attributes: {
     booking: Schema.Attribute.Relation<'manyToOne', 'api::booking.booking'>;
-    BookingUtensilItemID: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -483,6 +482,7 @@ export interface ApiBookingUtensilItemBookingUtensilItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'booking_utensil_items';
   info: {
+    description: '';
     displayName: 'BookingUtensilItem';
     pluralName: 'booking-utensil-items';
     singularName: 'booking-utensil-item';
@@ -492,7 +492,6 @@ export interface ApiBookingUtensilItemBookingUtensilItem
   };
   attributes: {
     booking: Schema.Attribute.Relation<'manyToOne', 'api::booking.booking'>;
-    BookingUtensilItemID: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -541,7 +540,6 @@ export interface ApiBookingBooking extends Struct.CollectionTypeSchema {
       'api::booking-utensil-item.booking-utensil-item'
     >;
     BookingDate: Schema.Attribute.DateTime;
-    BookingID: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -582,7 +580,6 @@ export interface ApiCredentialCredential extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CredentialID: Schema.Attribute.UID;
     CustomerID: Schema.Attribute.Relation<
       'oneToMany',
       'api::customer.customer'
@@ -606,6 +603,7 @@ export interface ApiCredentialCredential extends Struct.CollectionTypeSchema {
 export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
   collectionName: 'customers';
   info: {
+    description: '';
     displayName: 'Customer';
     pluralName: 'customers';
     singularName: 'customer';
@@ -622,7 +620,6 @@ export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::credential.credential'
     >;
-    CustomerID: Schema.Attribute.UID;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -642,6 +639,7 @@ export interface ApiDecorationItemDecorationItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'decoration_items';
   info: {
+    description: '';
     displayName: 'DecorationItem';
     pluralName: 'decoration-items';
     singularName: 'decoration-item';
@@ -657,7 +655,6 @@ export interface ApiDecorationItemDecorationItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    DecorationItemID: Schema.Attribute.UID;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -677,6 +674,7 @@ export interface ApiDecorationItemDecorationItem
 export interface ApiEventTypeEventType extends Struct.CollectionTypeSchema {
   collectionName: 'event_types';
   info: {
+    description: '';
     displayName: 'EventType';
     pluralName: 'event-types';
     singularName: 'event-type';
@@ -689,7 +687,6 @@ export interface ApiEventTypeEventType extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    EventID: Schema.Attribute.UID;
     EventName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -708,6 +705,7 @@ export interface ApiFurnitureItemFurnitureItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'furniture_items';
   info: {
+    description: '';
     displayName: 'FurnitureItem';
     pluralName: 'furniture-items';
     singularName: 'furniture-item';
@@ -723,7 +721,6 @@ export interface ApiFurnitureItemFurnitureItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FurnitureID: Schema.Attribute.UID;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -743,6 +740,7 @@ export interface ApiFurnitureItemFurnitureItem
 export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
+    description: '';
     displayName: 'Location';
     pluralName: 'locations';
     singularName: 'location';
@@ -762,7 +760,6 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     LocationAddress: Schema.Attribute.String;
-    LocationID: Schema.Attribute.UID;
     LocationType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -774,6 +771,7 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
 export interface ApiPaymentPayment extends Struct.CollectionTypeSchema {
   collectionName: 'payments';
   info: {
+    description: '';
     displayName: 'Payment';
     pluralName: 'payments';
     singularName: 'payment';
@@ -794,7 +792,6 @@ export interface ApiPaymentPayment extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     PaymentDate: Schema.Attribute.Date;
-    PAymentID: Schema.Attribute.UID;
     PaymentStatus: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -829,7 +826,6 @@ export interface ApiUserRoleUserRole extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    RoleID: Schema.Attribute.UID;
     RoleName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -840,6 +836,7 @@ export interface ApiUserRoleUserRole extends Struct.CollectionTypeSchema {
 export interface ApiUtensilItemUtensilItem extends Struct.CollectionTypeSchema {
   collectionName: 'utensil_items';
   info: {
+    description: '';
     displayName: 'UtensilItem';
     pluralName: 'utensil-items';
     singularName: 'utensil-item';
@@ -868,7 +865,6 @@ export interface ApiUtensilItemUtensilItem extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    UtensilItemID: Schema.Attribute.UID;
   };
 }
 

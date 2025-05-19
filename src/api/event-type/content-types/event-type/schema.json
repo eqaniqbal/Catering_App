@@ -4,15 +4,13 @@
   "info": {
     "singularName": "event-type",
     "pluralName": "event-types",
-    "displayName": "EventType"
+    "displayName": "EventType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "EventID": {
-      "type": "uid"
-    },
     "EventName": {
       "type": "string"
     },

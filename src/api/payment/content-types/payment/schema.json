@@ -4,7 +4,8 @@
   "info": {
     "singularName": "payment",
     "pluralName": "payments",
-    "displayName": "Payment"
+    "displayName": "Payment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,9 +19,6 @@
     },
     "PaymentStatus": {
       "type": "string"
-    },
-    "PAymentID": {
-      "type": "uid"
     },
     "Amount": {
       "type": "float"

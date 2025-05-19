@@ -11,9 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "AdminID": {
-      "type": "uid"
-    },
     "Name": {
       "type": "string"
     },

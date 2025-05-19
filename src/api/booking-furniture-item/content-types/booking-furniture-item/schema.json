@@ -4,15 +4,13 @@
   "info": {
     "singularName": "booking-furniture-item",
     "pluralName": "booking-furniture-items",
-    "displayName": "BookingFurnitureItem"
+    "displayName": "BookingFurnitureItem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "BookingUtensilItemID": {
-      "type": "uid"
-    },
     "booking": {
       "type": "relation",
       "relation": "manyToOne",

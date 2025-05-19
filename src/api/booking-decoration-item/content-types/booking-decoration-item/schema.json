@@ -4,15 +4,13 @@
   "info": {
     "singularName": "booking-decoration-item",
     "pluralName": "booking-decoration-items",
-    "displayName": "BookingDecorationItem"
+    "displayName": "BookingDecorationItem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "BookingDecorationItemID": {
-      "type": "uid"
-    },
     "booking": {
       "type": "relation",
       "relation": "manyToOne",

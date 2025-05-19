@@ -4,15 +4,13 @@
   "info": {
     "singularName": "booking-utensil-item",
     "pluralName": "booking-utensil-items",
-    "displayName": "BookingUtensilItem"
+    "displayName": "BookingUtensilItem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "BookingUtensilItemID": {
-      "type": "uid"
-    },
     "booking": {
       "type": "relation",
       "relation": "manyToOne",

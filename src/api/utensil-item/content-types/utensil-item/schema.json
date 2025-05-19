@@ -4,15 +4,13 @@
   "info": {
     "singularName": "utensil-item",
     "pluralName": "utensil-items",
-    "displayName": "UtensilItem"
+    "displayName": "UtensilItem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "UtensilItemID": {
-      "type": "uid"
-    },
     "Name": {
       "type": "string"
     },
