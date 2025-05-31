@@ -25,6 +25,16 @@
       "relation": "oneToMany",
       "target": "api::booking-utensil-item.booking-utensil-item",
       "mappedBy": "utensil_item"
+    },
+    "UtensilImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

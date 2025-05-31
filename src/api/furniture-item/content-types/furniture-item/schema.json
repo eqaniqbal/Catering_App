@@ -25,6 +25,16 @@
       "relation": "oneToMany",
       "target": "api::booking-furniture-item.booking-furniture-item",
       "mappedBy": "furniture_item"
+    },
+    "FurnitureImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

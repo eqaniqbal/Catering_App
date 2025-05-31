@@ -25,6 +25,16 @@
       "relation": "oneToMany",
       "target": "api::booking-decoration-item.booking-decoration-item",
       "mappedBy": "decoration_item"
+    },
+    "DecorationImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
