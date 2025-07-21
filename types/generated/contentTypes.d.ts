@@ -388,10 +388,7 @@ export interface ApiAdminAdmin extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CredentialID: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::credential.credential'
-    >;
+    Email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::admin.admin'> &
       Schema.Attribute.Private;
@@ -576,14 +573,9 @@ export interface ApiCredentialCredential extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    AdminID: Schema.Attribute.Relation<'oneToMany', 'api::admin.admin'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CustomerID: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::customer.customer'
-    >;
     Email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -593,7 +585,7 @@ export interface ApiCredentialCredential extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
-    RoleID: Schema.Attribute.Relation<'manyToOne', 'api::user-role.user-role'>;
+    RoleID: Schema.Attribute.Relation<'oneToOne', 'api::user-role.user-role'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -616,10 +608,7 @@ export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CredentialID: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::credential.credential'
-    >;
+    Email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -823,10 +812,6 @@ export interface ApiUserRoleUserRole extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    CredentialID: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::credential.credential'
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -17,14 +17,17 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.13.0",
-    "@strapi/plugin-users-permissions": "5.13.0",
-    "@strapi/strapi": "5.13.0",
+    "@strapi/plugin-users-permissions": "^5.18.1",
+    "@strapi/strapi": "^5.18.1",
+    "bcryptjs": "^3.0.2",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
+    "jsonwebtoken": "^9.0.2",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi": "^3.6.11",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

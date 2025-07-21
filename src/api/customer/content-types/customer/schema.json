@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Name": {
       "type": "string"
@@ -17,17 +18,14 @@
     "PhoneNumber": {
       "type": "integer"
     },
-    "CredentialID": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::credential.credential",
-      "inversedBy": "CustomerID"
-    },
     "bookings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "customer"
+    },
+    "Email": {
+      "type": "email"
     }
   }
 }

@@ -10,15 +10,10 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "RoleName": {
       "type": "string"
-    },
-    "CredentialID": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::credential.credential",
-      "mappedBy": "RoleID"
     }
   }
 }
