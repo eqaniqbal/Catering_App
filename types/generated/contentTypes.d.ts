@@ -537,6 +537,7 @@ export interface ApiBookingBooking extends Struct.CollectionTypeSchema {
       'api::booking-utensil-item.booking-utensil-item'
     >;
     BookingDate: Schema.Attribute.DateTime;
+    BookingLocationAddress: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -641,6 +642,7 @@ export interface ApiDecorationItemDecorationItem
       'oneToMany',
       'api::booking-decoration-item.booking-decoration-item'
     >;
+    Category: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -756,7 +758,6 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
       'api::location.location'
     > &
       Schema.Attribute.Private;
-    LocationAddress: Schema.Attribute.String;
     LocationType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
