@@ -584,7 +584,7 @@ export interface ApiCredentialCredential extends Struct.CollectionTypeSchema {
       'api::credential.credential'
     > &
       Schema.Attribute.Private;
-    Password: Schema.Attribute.Password;
+    Password: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     RoleID: Schema.Attribute.Relation<'oneToOne', 'api::user-role.user-role'>;
     updatedAt: Schema.Attribute.DateTime;
@@ -712,6 +712,9 @@ export interface ApiFurnitureItemFurnitureItem
     booking_furniture_items: Schema.Attribute.Relation<
       'oneToMany',
       'api::booking-furniture-item.booking-furniture-item'
+    >;
+    Category: Schema.Attribute.Enumeration<
+      ['Chairs', 'Tables', 'Lounging', 'StageFurniture']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -843,6 +846,9 @@ export interface ApiUtensilItemUtensilItem extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::booking-utensil-item.booking-utensil-item'
     >;
+    Category: Schema.Attribute.Enumeration<
+      ['Cups', 'Spoons', 'Forks', 'Bowls', 'Plates']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -852,10 +858,10 @@ export interface ApiUtensilItemUtensilItem extends Struct.CollectionTypeSchema {
       'api::utensil-item.utensil-item'
     > &
       Schema.Attribute.Private;
+    Material: Schema.Attribute.String;
     Name: Schema.Attribute.String;
     PricePerGuest: Schema.Attribute.Float;
     publishedAt: Schema.Attribute.DateTime;
-    Style: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

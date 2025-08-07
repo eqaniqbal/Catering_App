@@ -10,11 +10,12 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Name": {
       "type": "string"
     },
-    "Style": {
+    "Material": {
       "type": "string"
     },
     "PricePerGuest": {
@@ -27,14 +28,24 @@
       "mappedBy": "utensil_item"
     },
     "UtensilImage": {
+      "type": "media",
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Cups",
+        "Spoons",
+        "Forks",
+        "Bowls",
+        "Plates"
+      ]
     }
   }
 }
